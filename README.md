@@ -40,10 +40,10 @@ The Loss Ratio is defined as the total insurable losses divided by the total pre
 <img width="900" height = "400" alt="Screen Shot 2024-12-29 at 11 51 33 AM" src="https://github.com/user-attachments/assets/ac2bafae-b06c-42e1-b430-aa779eb9f11a" />
 
 ## BOB 
-<img width="995" alt="image" src="https://github.com/user-attachments/assets/837e889d-ad7e-4f27-8cb4-f526f33590da" />
+<img width="900" height = "400" alt="image" src="https://github.com/user-attachments/assets/837e889d-ad7e-4f27-8cb4-f526f33590da" />
 
 ## BOB Loss Ratios
-<img width="995" alt="Screen Shot 2024-12-29 at 11 52 18 AM" src="https://github.com/user-attachments/assets/93096f65-176c-4c08-b819-d7d86bd7dc9b" />
+<img width="900" height = "400" alt="Screen Shot 2024-12-29 at 11 52 18 AM" src="https://github.com/user-attachments/assets/93096f65-176c-4c08-b819-d7d86bd7dc9b" />
 
 
 
