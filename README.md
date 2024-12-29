@@ -29,18 +29,21 @@ Lines 90-120 include example runs for how this function can be used to generate 
 The farm_sim() function is used to create a list of vectors representing potential payouts and premiums for a producer’s corn and soy insurance policy. This function takes a farmQauntile, fips_code, coverage level, projected price for corn and soy, the number of acres planted of soy and corn for the producer, and a random seed. farmQauntile specifies the quality of the farms APH relative to the county it is in and is used to generate more realistic county loss ratios in simulate_loss_ratio_var(). Fips_code specifies what county a farmer is in and ensures that the correct county yields are used in the simulation. The function starts by pulling the correct historical and simulated county yields from matrix X. 
 Next it pulls farm level residuals for both corn and soy and correlates them using the Iman Conover Process. The function then adds the correlated shocks to the simulated corn and soybean vectors and truncates any negative values at zero. Next the matrix adjusts the producers APH up or down based on its farmQuantile. For example, if the farm had a low quantile it would have an APH below the counties mean APH. A quantile of ~50% would cause the farm to have an APH very close the counties mean APH. Next the quoted premium and simulated payouts to the farmers are calculated based on the project’s specifications and the RMA. The function then scales these payments and premiums by the number of acres the farmer has planted in soy and corn. Finally, a list containing a vector of potential joint, and crop specific payment and premiums is returned by the function. 
 simulate_loss_ratio_var() uses farm_sim() to calculate potential payouts and premiums for 10 farmers in each county for all counties included in this project. The function stores the payments and premiums received from each of the 10 farms into two separate matrices. Each farm in a county is assigned a farmQuantile score ranging from 10%-90%. After computing the simulated premium and payments for each farm in a county via the farm_sim() function the matrices are row summed to create a vector of potential county payouts and premiums collected. Next these vectors are added to two vectors representing the entire BOBs collected premiums and payouts to farmers. The function then computes the county’s loss ratio, average loss ratio, 99% VAR and VAR. 99.6%.
-This process is then repeated for each county in the project. Afterwards the final loss ratio, 99% VAR, 99.6% VAR, and average loss ratio are computed for the entire BOB. Finally, the average, 99% VAR, and 99.6% VAR of the loss ratio for all counties and BOB is visualized. Lines 289-295 ensure that the counties losses are still correlated and the correlation structure present in the counties’ yields successfully propagated to its losses. 
+This process is then repeated for each county in the project. Afterwards the final loss ratio, 99% VAR, 99.6% VAR, and average loss ratio are computed for the entire BOB. Finally, the average, 99% VAR, and 99.6% VAR of the loss ratio for all counties and BOB is visualized. Lines 289-295 ensure that the counties losses are still correlated and the correlation structure present in the counties’ yields successfully propagated to its losses.
 </p>
 
 # Results 
 
+The Loss Ratio is defined as the total insurable losses divided by the total premium payments recieved by the insurer. For example, a loss ratio of 5 would indicate that the insurer payed out 5 times as much in claims than they recieved in premium payments from the farmers for a simulared scenario. The VaR 99% is the value at which there is only a 1% chance of an insurer facing a greater loss ratio (a 1 in 100 year event). The VaR 99.6% is the value at which there is only a 0.4% chance of an insurer facing a greater loss ratio (a 1 in 250 year event). 
+
 ## County Level Loss Ratios
-<img width="450" alt="image" src="https://github.com/user-attachments/assets/aafef629-696c-4a15-84d4-75887e750fd0" />
+<img width="995" alt="Screen Shot 2024-12-29 at 11 51 33 AM" src="https://github.com/user-attachments/assets/ac2bafae-b06c-42e1-b430-aa779eb9f11a" />
 
 ## BOB 
 <img width="424" alt="image" src="https://github.com/user-attachments/assets/837e889d-ad7e-4f27-8cb4-f526f33590da" />
 
 ## BOB Loss Ratios
-<img width="450" alt="image" src="https://github.com/user-attachments/assets/19db291e-c352-4d17-adbd-09d153acf6eb" />
+<img width="347" alt="Screen Shot 2024-12-29 at 11 52 18 AM" src="https://github.com/user-attachments/assets/93096f65-176c-4c08-b819-d7d86bd7dc9b" />
+
 
 
