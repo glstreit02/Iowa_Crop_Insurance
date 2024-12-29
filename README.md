@@ -2,6 +2,7 @@
 
 <p>Due to licensing restrictions the data used in this project cannot be made publicly available.</p>
 
+# File Descriptions
 
 ## corrYields.R
 
@@ -30,3 +31,16 @@ Next it pulls farm level residuals for both corn and soy and correlates them usi
 simulate_loss_ratio_var() uses farm_sim() to calculate potential payouts and premiums for 10 farmers in each county for all counties included in this project. The function stores the payments and premiums received from each of the 10 farms into two separate matrices. Each farm in a county is assigned a farmQuantile score ranging from 10%-90%. After computing the simulated premium and payments for each farm in a county via the farm_sim() function the matrices are row summed to create a vector of potential county payouts and premiums collected. Next these vectors are added to two vectors representing the entire BOBs collected premiums and payouts to farmers. The function then computes the county’s loss ratio, average loss ratio, 99% VAR and VAR. 99.6%.
 This process is then repeated for each county in the project. Afterwards the final loss ratio, 99% VAR, 99.6% VAR, and average loss ratio are computed for the entire BOB. Finally, the average, 99% VAR, and 99.6% VAR of the loss ratio for all counties and BOB is visualized. Lines 289-295 ensure that the counties losses are still correlated and the correlation structure present in the counties’ yields successfully propagated to its losses. 
 </p>
+
+# Results 
+
+## County Level Loss Ratios
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/aafef629-696c-4a15-84d4-75887e750fd0" />
+
+## BOB 
+<img width="424" alt="image" src="https://github.com/user-attachments/assets/837e889d-ad7e-4f27-8cb4-f526f33590da" />
+
+## BOB Loss Ratios
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/19db291e-c352-4d17-adbd-09d153acf6eb" />
+
+
