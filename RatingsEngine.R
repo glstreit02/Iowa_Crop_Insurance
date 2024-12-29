@@ -88,7 +88,6 @@ ratings_engine <- function(code, county_fips, APH, CVG, PP_Price, ivol, dT, ypco
 
 
 #Demos
-
 code <- 41
 fips <- 19169
 APH <- 200
