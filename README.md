@@ -37,7 +37,7 @@ This process is then repeated for each county in the project. Afterwards the fin
 The Loss Ratio is defined as the total insurable losses divided by the total premium payments recieved by the insurer. For example, a loss ratio of 5 would indicate that the insurer payed out 5 times as much in claims than they recieved in premium payments from the farmers for a simulared scenario. The VaR 99% is the value at which there is only a 1% chance of an insurer facing a greater loss ratio (a 1 in 100 year event). The VaR 99.6% is the value at which there is only a 0.4% chance of an insurer facing a greater loss ratio (a 1 in 250 year event). 
 
 ## County Level Loss Ratios
-<img width="995" alt="Screen Shot 2024-12-29 at 11 51 33 AM" src="https://github.com/user-attachments/assets/ac2bafae-b06c-42e1-b430-aa779eb9f11a" />
+<img width="900" height = "200" alt="Screen Shot 2024-12-29 at 11 51 33 AM" src="https://github.com/user-attachments/assets/ac2bafae-b06c-42e1-b430-aa779eb9f11a" />
 
 ## BOB 
 <img width="995" alt="image" src="https://github.com/user-attachments/assets/837e889d-ad7e-4f27-8cb4-f526f33590da" />
